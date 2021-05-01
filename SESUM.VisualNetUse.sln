@@ -5,9 +5,14 @@ VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{152F66D6-3B87-493D-906F-301633E4FF78}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{23D8C18B-C27E-472C-A527-C57B51632E03}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{23D8C18B-C27E-472C-A527-C57B51632E03}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SESUM.VisualNetUse.UI", "SESUM.VisualNetUse.UI\SESUM.VisualNetUse.UI.csproj", "{F8AD5462-71A6-4951-833F-71DB19026ED0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A9EB4AC4-B2C2-4622-BBD4-3F62754502BE}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Documents\Mockup VisualNetUse.pptx = ..\..\..\Documents\Mockup VisualNetUse.pptx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
