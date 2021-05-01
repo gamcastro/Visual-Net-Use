@@ -47,7 +47,7 @@
 
         <!--#endregion Fim Cabeçalho-->
         <!-- Botão de Configurar Pastas-->
-        <StackPanel Margin="20,100,20,20">
+        <StackPanel Margin="20,80,20,20">
             <Button               
                 Padding="10"
                 Height="120"
@@ -57,7 +57,7 @@
                     <DropShadowEffect/>
                 </Button.Effect>
                 <TextBlock TextAlignment="Center" 
-                   >Configurar<LineBreak/>Pastas</TextBlock>
+                   >Configurar<LineBreak/>Pastas<LineBreak/>do TRE</TextBlock>
             </Button>
         </StackPanel>
         <!-- Fim de Configurar Pastas -->
