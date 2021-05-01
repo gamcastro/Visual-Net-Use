@@ -5,8 +5,61 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SESUM.VisualNetUse.UI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Title="TRE-MA SESUM" Height="512.277" Width="450.884" 
         
-    </Grid>
+        Background="#FF222A35">
+    <StackPanel>
+        <!--#region Cabeçalho-->
+
+        <Canvas Height="100">
+            <Rectangle
+                Width="444.884"
+                Height="59">
+                <Rectangle.Effect>
+                    <DropShadowEffect/>
+                </Rectangle.Effect>
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="Black" Offset="0"/>
+                        <GradientStop Color="#FF385723" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+
+            </Rectangle>
+            <Image Source="{StaticResource Brasao}"
+                       Width="81" Canvas.Left="14" Canvas.Top="5.17" Height="84.83"/>
+            <TextBlock
+                       Foreground="White"
+                       Canvas.Left="91"
+                       Canvas.Top="9.17" FontFamily="Calibri"
+                       FontSize="20"><Run Text="Configurador de "/><Run Text="Pastas"/></TextBlock>
+            <TextBlock Text="Justiça Eleitoral"
+                       Foreground="White"
+                       Opacity="0.5"
+                       FontSize="10"
+                       FontFamily="Calibri" 
+                       Canvas.Left="364.066" 
+                       Canvas.Top="37.63"/>
+        </Canvas>
+
+
+        <!--#endregion Fim Cabeçalho-->
+        <!-- Botão de Configurar Pastas-->
+        <StackPanel Margin="20,100,20,20">
+            <Button               
+                Padding="10"
+                Height="120"
+                Width="160"                              
+                FontWeight="Bold" FontSize="20" FontFamily="Calibri">
+                <Button.Effect>
+                    <DropShadowEffect/>
+                </Button.Effect>
+                <TextBlock TextAlignment="Center" 
+                   >Configurar<LineBreak/>Pastas</TextBlock>
+            </Button>
+        </StackPanel>
+        <!-- Fim de Configurar Pastas -->
+    </StackPanel>
 </Window>
