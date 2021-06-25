@@ -46,6 +46,18 @@ namespace SESUM.VisualNetUse.UI.Utils
             }
            
         }
+        public static bool GetPastaMontada()
+        {
+            if (Directory.Exists("Z:\\"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
         public static void ExecutaPowerShellScript(string folderName,string scriptFile)
         {
             string caminhoCompleto = folderName +  scriptFile;

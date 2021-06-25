@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SESUM.VisualNetUse.UI"
+        xmlns:utils="clr-namespace:SESUM.VisualNetUse.UI.Utils"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
@@ -67,8 +68,11 @@
         <Border BorderThickness="1"
                 BorderBrush="Black"
                 >
+            <Border.Resources>
+                <utils:VerificaPastaMontadaConverter x:Key="VerificaPastasMontadaConverter"/>
+            </Border.Resources>
             <TextBlock 
-                Text="Pastas Corporativas já montadas"
+                Text="{Binding IsPastaMontada,Converter={StaticResource VerificaPastasMontadaConverter}}"
                 HorizontalAlignment="Center"
                 FontSize="18" FontWeight="Bold" Foreground="White"
                 />

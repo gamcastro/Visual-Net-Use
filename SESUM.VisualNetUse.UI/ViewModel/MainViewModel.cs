@@ -28,15 +28,24 @@ namespace SESUM.VisualNetUse.UI.ViewModel
         public MainViewModel()
         {
             MontarCommand = new RelayCommand(MontarCommandMethod);
+            RaisePropertyChanged("IsPastaMontada");
         }
 
         public ICommand MontarCommand { get; private set; }
 
+        public bool IsPastaMontada
+        {
+            get
+            {
+                return Executor.GetPastaMontada();
+            }
+        }
         public void MontarCommandMethod()
         {
               
             Executor.MontarAmbiente(@"C:\app\", "montapastascorporativas.ps1");          
             Executor.ExecutaPowerShellScript(@"C:\app\", "montapastascorporativas.ps1");
+            RaisePropertyChanged("IsPastaMontada");
         }
     }
 }
