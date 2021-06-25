@@ -8,7 +8,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         Title="TRE-MA SESUM" Height="512.277" Width="450.884" 
-        
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
         Background="#FF222A35">
     <StackPanel>
         <!--#region Cabeçalho-->
@@ -51,7 +51,8 @@
             <Button               
                 Padding="10"
                 Height="120"
-                Width="160"                              
+                Width="160" 
+                Command="{Binding MontarCommand}"
                 FontWeight="Bold" FontSize="20" FontFamily="Calibri">
                 <Button.Effect>
                     <DropShadowEffect/>

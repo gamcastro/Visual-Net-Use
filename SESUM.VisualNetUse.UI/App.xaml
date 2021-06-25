@@ -3,9 +3,11 @@
     <ResourceDictionary>
       <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="Recursos\Imagens.xaml">
-          <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:SESUM.VisualNetUse.UI.ViewModel" />
+          
         </ResourceDictionary>
+          
       </ResourceDictionary.MergedDictionaries>
-    </ResourceDictionary>
+        <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" xmlns:vm="clr-namespace:SESUM.VisualNetUse.UI.ViewModel" />
+        </ResourceDictionary>
   </Application.Resources>
 </Application>

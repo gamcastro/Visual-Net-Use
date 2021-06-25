@@ -1,4 +1,10 @@
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using SESUM.VisualNetUse.UI.Utils;
+using System;
+using System.Diagnostics;
+using System.Windows;
+using System.Windows.Input;
 
 namespace SESUM.VisualNetUse.UI.ViewModel
 {
@@ -21,14 +27,16 @@ namespace SESUM.VisualNetUse.UI.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            ////if (IsInDesignMode)
-            ////{
-            ////    // Code runs in Blend --> create design time data.
-            ////}
-            ////else
-            ////{
-            ////    // Code runs "for real"
-            ////}
+            MontarCommand = new RelayCommand(MontarCommandMethod);
+        }
+
+        public ICommand MontarCommand { get; private set; }
+
+        public void MontarCommandMethod()
+        {
+              
+            Executor.MontarAmbiente(@"C:\app\", "montapastascorporativas.ps1");          
+            Executor.ExecutaPowerShellScript(@"C:\app\", "montapastascorporativas.ps1");
         }
     }
 }
