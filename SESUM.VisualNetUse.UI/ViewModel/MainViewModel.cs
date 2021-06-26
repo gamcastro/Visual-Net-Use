@@ -26,12 +26,12 @@ namespace SESUM.VisualNetUse.UI.ViewModel
         /// Initializes a new instance of the MainViewModel class.
         /// </summary>
         public MainViewModel()
-        {
-            MontarCommand = new RelayCommand(MontarCommandMethod);
+        {            
             RaisePropertyChanged("IsPastaMontada");
+            MontarCommand = new RelayCommand(MontarCommandMethod, CanMontarCommandMethod);
         }
 
-        public ICommand MontarCommand { get; private set; }
+        public RelayCommand MontarCommand { get; private set; }
 
         public bool IsPastaMontada
         {
@@ -46,6 +46,13 @@ namespace SESUM.VisualNetUse.UI.ViewModel
             Executor.MontarAmbiente(@"C:\app\", "montapastascorporativas.ps1");          
             Executor.ExecutaPowerShellScript(@"C:\app\", "montapastascorporativas.ps1");
             RaisePropertyChanged("IsPastaMontada");
+            MontarCommand.RaiseCanExecuteChanged();
+            
+        }
+
+        public bool CanMontarCommandMethod()
+        {
+            return !IsPastaMontada;
         }
     }
 }
