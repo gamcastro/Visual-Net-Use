@@ -39,10 +39,10 @@
             <TextBlock Text="Justiça Eleitoral"
                        Foreground="White"
                        Opacity="0.5"
-                       FontSize="10"
+                       FontSize="12"
                        FontFamily="Calibri" 
-                       Canvas.Left="364.066" 
-                       Canvas.Top="37.63"/>
+                       Canvas.Left="357" 
+                       Canvas.Top="43"/>
         </Canvas>
 
 
@@ -77,5 +77,6 @@
                 FontSize="18" FontWeight="Bold" Foreground="White"
                 />
         </Border>
+        <!--#endregion-->
     </StackPanel>
 </Window>
