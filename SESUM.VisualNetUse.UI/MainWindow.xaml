@@ -65,18 +65,23 @@
         </StackPanel>
        <!--#endregion Botão-->
         <!--#region Aviso-->
-        <Border BorderThickness="1"
-                BorderBrush="Black"
-                >
-            <Border.Resources>
+        <StackPanel>
+            <StackPanel.Resources>
                 <utils:VerificaPastaMontadaConverter x:Key="VerificaPastasMontadaConverter"/>
-            </Border.Resources>
+                <utils:VerificaVPNConectada x:Key="VerificaVPNConectada"/>
+            </StackPanel.Resources>
             <TextBlock 
                 Text="{Binding IsPastaMontada,Converter={StaticResource VerificaPastasMontadaConverter}}"
                 HorizontalAlignment="Center"
                 FontSize="18" FontWeight="Bold" Foreground="White"
                 />
-        </Border>
+            <TextBlock 
+                Text="{Binding IsVPNConectada,Converter={StaticResource VerificaVPNConectada}}"
+                HorizontalAlignment="Center"
+                FontSize="18" FontWeight="Bold" Foreground="White"
+                />
+
+        </StackPanel>
         <!--#endregion-->
     </StackPanel>
 </Window>

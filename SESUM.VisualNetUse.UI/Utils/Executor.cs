@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Reflection;
 using System.Text;
 using System.Threading;
@@ -81,6 +82,24 @@ namespace SESUM.VisualNetUse.UI.Utils
             {
 
             }
+        }
+
+        public static bool CheckForVPNInterface()
+        {
+            if (NetworkInterface.GetIsNetworkAvailable())
+            {
+                NetworkInterface[] interfaces =
+                    NetworkInterface.GetAllNetworkInterfaces();
+                foreach (NetworkInterface item in interfaces)
+                {
+                    if (item.Description.Contains("Fortinet SSL VPN Virtual Ethernet Adapter")
+                        && item.OperationalStatus == OperationalStatus.Up)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
     }
 }

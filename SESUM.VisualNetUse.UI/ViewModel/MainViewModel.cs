@@ -33,6 +33,14 @@ namespace SESUM.VisualNetUse.UI.ViewModel
 
         public RelayCommand MontarCommand { get; private set; }
 
+        public bool IsVPNConectada
+        {
+            get
+            {
+                return Executor.CheckForVPNInterface();
+            }
+        }
+
         public bool IsPastaMontada
         {
             get
@@ -52,7 +60,7 @@ namespace SESUM.VisualNetUse.UI.ViewModel
 
         public bool CanMontarCommandMethod()
         {
-            return !IsPastaMontada;
+            return !IsPastaMontada && IsVPNConectada;
         }
     }
 }
